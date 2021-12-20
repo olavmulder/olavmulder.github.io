@@ -1,1 +1,18 @@
-hello World
+<html>
+
+<head>
+  <script>
+    function myFunction() {
+        var url = window.location.search
+        document.getElementById("url").innerHTML = url;
+    }
+  </script>
+</head>
+
+<body onload="myFunction()">
+
+  <h1>"url" <span id="url"></span></h1>
+
+</body>
+
+</html>
