@@ -1,13 +1,5 @@
 import * as con from 'constant.js'
-function CalculatePoints();
 
-var form = document.getElementById('point-form');
-if (form.attachEvent) {
-    form.attachEvent("submit", CalculatePoints);
-} else {
-    form.addEventListener("submit", CalculatePoints);
-
-}
 function CalculatePoints(){
     let sum;
     sum = con.points60(form.elements['60m'].value);
@@ -18,4 +10,12 @@ function CalculatePoints(){
     sum += con.pointsEsta60(form.elements['esta'].value);
     console.log(sum);
     return sum;
+}
+
+var form = document.getElementById('point-form');
+if (form.attachEvent) {
+    form.attachEvent("submit", CalculatePoints);
+} else {
+    form.addEventListener("submit", CalculatePoints);
+
 }
