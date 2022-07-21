@@ -6,6 +6,7 @@ if (form.attachEvent) {
     form.attachEvent("submit", CalculatePoints);
 } else {
     form.addEventListener("submit", CalculatePoints);
+
 }
 function CalculatePoints(){
     let sum;
@@ -15,5 +16,6 @@ function CalculatePoints(){
     sum += pointsBal(form.elements['bal'].value);
     sum += pointsLJ(form.elements['ver'].value);
     sum += pointsEsta60(form.elements['esta'].value);
+    console.log(sum);
     return sum;
 }
